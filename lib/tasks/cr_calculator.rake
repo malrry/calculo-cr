@@ -1,9 +1,9 @@
 namespace :cr do
     task calculator: :environment do
       file_path = "data/notas.csv"
-  
+
       AlunoDisciplinas::CsvLoader.new(file_path).load
-  
+
       puts "------- O CR dos alunos é: --------"
       Aluno.find_each do |aluno|
         cr = Alunos::CrCalculator.new(aluno).calculate
@@ -11,7 +11,7 @@ namespace :cr do
         puts "#{aluno.matricula}  -  #{cr}"
       end
       puts "-----------------------------------"
-  
+
       puts "----- Média de CR dos cursos ------"
       Curso.find_each do |curso|
         media_cr = Cursos::CrCalculator.new(curso).calculate
@@ -21,4 +21,3 @@ namespace :cr do
       puts "-----------------------------------"
     end
 end
-  

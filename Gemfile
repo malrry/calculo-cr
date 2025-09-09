@@ -63,6 +63,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "rspec-rails"
-  gem 'shoulda-matchers' # tem os matchers (é tipo um comando) de model, como por exemplo is expected to has many etc etc
-  gem 'simplecov', require: false # pra me dizer se os meus testes estao cobrindo todas as linhas de codigo necessarias
+  gem "shoulda-matchers" # tem os matchers (é tipo um comando) de model, como por exemplo is expected to has many etc etc
+  gem "simplecov", require: false # pra me dizer se os meus testes estao cobrindo todas as linhas de codigo necessarias
 end

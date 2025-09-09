@@ -1,5 +1,4 @@
 RSpec.describe Cursos::CrCalculator, type: :services do
-    
     describe "#calculate" do
         context "when there are majors average scores to calculate" do
             it "calculates average cr" do
@@ -15,7 +14,7 @@ RSpec.describe Cursos::CrCalculator, type: :services do
 
 
                 service = described_class.new(curso).calculate
-                expect(service).to eq(61)      
+                expect(service).to eq(61)
             end
         end
     end
