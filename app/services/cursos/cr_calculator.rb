@@ -7,16 +7,17 @@ module Cursos
         end
 
         def calculate
-            crs = []
+            alunos = []
 
             @curso.disciplinas.each do |disciplina|
                 disciplina.alunos.each do |aluno|
-                    crs << aluno.cr
+                    alunos << aluno
                 end
             end
+            alunos.uniq!
 
-            soma_cr = crs.sum
-            qtd_alunos = crs.count
+            soma_cr = alunos.sum(&:cr)
+            qtd_alunos = alunos.count
             (soma_cr / qtd_alunos)
         end
     end
