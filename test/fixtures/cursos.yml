@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo_curso: MyString
+  media_cr: 1.5
+
+two:
+  codigo_curso: MyString
+  media_cr: 1.5

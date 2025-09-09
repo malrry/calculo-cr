@@ -1,0 +1,40 @@
+<h1> Curso </h1>
+<div>
+<%= link_to "Voltar para cursos", cursos_path %>
+</div>
+<p>
+  <strong>Curso ID:</strong>
+  <%= @curso.id %>
+</p>
+<p>
+  <strong>Código do Curso:</strong>
+  <%= @curso.codigo_curso %>
+</p>
+<p>
+  <strong>Média CR:</strong>
+  <%= @curso.media_cr %>
+</p>
+
+<h2> Disciplinas desse curso: </h2>
+<table border="1" cellpadding="10">
+<thead>
+  <tr>
+    <th>Disciplina ID</th>
+    <th>Código da disciplina</th>
+  </tr>
+</thead>
+<tbody>
+<tbody>
+  <% @curso.disciplinas.each do |disciplina| %>
+    <tr>
+      <td><%= disciplina.id %></td>
+      <td><%= disciplina.codigo_disciplina %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+</div>
+</br>
+<div>
+<%= link_to "Voltar para cursos", cursos_path %>
+</div>

@@ -1,0 +1,31 @@
+<% content_for :title, "Disciplinas" %>
+
+<h1>Disciplinas</h1>
+<h3>Contagem total de disciplinas: <%=@disciplinas.count%></h3>
+<div>
+  <%= link_to "Voltar para home", root_path %>
+</div></br>
+<div>
+  <table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>ID Disciplina</th>
+      <th>Código da Disciplina</th>
+      <th>CH</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tbody>
+    <% @disciplinas.each do |disciplina| %>
+      <tr>
+        <td><%= disciplina.id %></td>
+        <td><%= disciplina.codigo_disciplina %></td>
+        <td><%= disciplina.carga_horaria %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div></br>
+<div>
+  <%= link_to "Voltar para home", root_path %>
+</div></br>

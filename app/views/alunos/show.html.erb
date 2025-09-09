@@ -1,0 +1,45 @@
+  <h1> Aluno </h1>
+  <div>
+  <%= link_to "Voltar pra alunos", alunos_path %>
+  </div>
+  <p>
+    <strong>Matricula:</strong>
+    <%= @aluno.matricula %>
+  </p>
+
+  <p>
+    <strong>CR:</strong>
+    <%= @aluno.cr %>
+  </p>
+
+  <h2> Disciplinas cursadas: </h2>
+  <table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Disciplina ID</th>
+      <th>Código da Disciplina</th>
+      <th>Carga Horaria</th>
+      <th>Nota</th>
+      <th>Ano Semestre</th>
+      <th>Curso ID</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tbody>
+    <% @aluno.aluno_disciplinas.order(:ano_semestre).each do |aluno_disciplina| %>
+      <tr>
+        <td><%= aluno_disciplina.disciplina_id %></td>
+        <td><%= aluno_disciplina.disciplina.codigo_disciplina %></td>
+        <td><%= aluno_disciplina.disciplina.carga_horaria %></td>
+        <td><%= aluno_disciplina.nota_aluno %></td>
+        <td><%= aluno_disciplina.ano_semestre %></td>
+        <td><%= aluno_disciplina.disciplina.curso_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div>
+</br>
+<div>
+  <%= link_to "Voltar pra alunos", alunos_path %>
+</div>

@@ -1,0 +1,33 @@
+<% content_for :title, "Cursos" %>
+
+<h1>Cursos</h1>
+<h3>Contagem total de cursos: <%=@cursos.count%></h3>
+<div>
+  <%= link_to "Voltar para home", root_path %>
+</div></br>
+<div>
+  <table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Curso ID</th>
+      <th>Código Curso</th>
+      <th>Media CR</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <tbody>
+    <% @cursos.each do |curso| %>
+      <tr>
+        <td><%= curso.id %></td>
+        <td><%= curso.codigo_curso %></td>
+        <td><%= curso.media_cr %></td>
+        <td><%= link_to "Mostrar mais", curso %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div></br>
+<div>
+  <%= link_to "Voltar para home", root_path %>
+</div></br>
