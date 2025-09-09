@@ -16,7 +16,7 @@ RSpec.describe AlunoDisciplinas::CsvLoader, type: :services do
                 csv_file.write(csv_content)
                 csv_file.rewind
 
-                service = described_class.new(csv_file.path).load # explicar depois de novo
+                service = described_class.new(csv_file.path).load
                 expect(Aluno.count).to eq 3
                 expect(Disciplina.count).to eq 3
                 expect(AlunoDisciplina.count).to eq 3
